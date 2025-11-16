@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class ConvertStringToArray {
 	public static void main(String[] args) {
@@ -9,8 +10,12 @@ public class ConvertStringToArray {
 		char[] charsFromString = stringFromChars.toCharArray();
 		
 		String theSameString =  new String(charsFromString);
+		
+		String text = "Hello";
+		String[] parts = text.split("");
 	
 		System.out.println("Result from String From Chars: " + stringFromChars);
 		System.out.println("Result from Chars From String: " + theSameString);
+		System.out.println("Result from Text: " + Arrays.toString(parts));
 	}
 }
