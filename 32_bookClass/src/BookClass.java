@@ -8,7 +8,7 @@ public class BookClass {
 		harryPotter.author = "J. K. Rowling";
 		harryPotter.year = 1997;
 		
-		System.out.println(harryPotter.title + " by " + harryPotter.author +"(" + harryPotter.year + ")");
+		
 		
 		Book hobbit =  new Book();
 		
@@ -16,6 +16,7 @@ public class BookClass {
 		hobbit.author = "J.R.R Tolkien";
 		hobbit.year = 1995;
 		
+		System.out.println(harryPotter.title + " by " + harryPotter.author +"(" + harryPotter.year + ")");
 		System.out.println(hobbit.title + " by " + hobbit.author +"(" + hobbit.year + ")");
 	}
 }
