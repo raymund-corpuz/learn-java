@@ -10,20 +10,25 @@ public class BankAccount {
 	public static int accountsCreate;
 	public static int allAccounts;
 	public static final String BANKCODE = "GWAPO";
-	public static final double MINIMUM_BALANCE = 1000.0;
+	public static final double MINIMUM_BALANCE = 10000.0;
 	
 	double deposit(double ammount) {
 		return balance += ammount;
 	}
 	
 	double withdraw(double ammount) {	
-			if(balance < MINIMUM_BALANCE) {
-				System.out.println("Your account should have a maintaining balance of 1000");        				
-				if(balance < ammount) {
-					System.out.println("Not Enough Balance");	
-			}
+		double remaining_balance = balance - ammount;
+		
+		if(remaining_balance < MINIMUM_BALANCE) {
+			System.out.println("Withdraw denied : You must maintain atleast " + MINIMUM_BALANCE);
+		return balance;
 		}
-		return balance -= ammount;
+		
+		if(balance < ammount) {
+			System.out.println("Insufficient funds");
+		}
+		
+		return balance =  remaining_balance;
 	}
 	
 	void getAccountInfo() {
@@ -32,10 +37,6 @@ public class BankAccount {
 		System.out.println("Account Name      : " + accountHolderName);
 		System.out.println("Balance           : " + balance);
 	}
-	
-	
-	
-	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -47,7 +48,7 @@ public class BankAccount {
 		raymund.balance = 10000.0;
 		
 		raymund.deposit(50000.0);
-		raymund.withdraw(60000.0);
+		raymund.withdraw(50000.0);
 		raymund.getAccountInfo();
 		
 		
