@@ -12,19 +12,19 @@ public class UniversityEnrollment {
 	// Static members
 	static int totalCourses;
 	static int totalEnrolledStudents;
-	static final int universityCapacity;
+	static final int universityCapacity = 30;
 	static final String UNIVERSITY_CODE = "UNIVERSITY";
 	
 	// Constructor
 	public UniversityEnrollment(String courseName, String instructor, int capacity ){
 		this.courseName = courseName;
 		this.instructor = instructor;
-		this.universityCapacity =  capacity;
+		this.capacity =  capacity;
 	}
 	
 	// Non static methods
 	int enrollStudent(String studentName) {
-		if(capacity >= capacity) {
+		if(capacity > capacity) {
 			System.out.println(studentName + " Should go to waitlist");
 			return capacity;
 		}else {
