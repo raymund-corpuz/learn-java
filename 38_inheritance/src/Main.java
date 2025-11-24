@@ -3,7 +3,7 @@ import java.util.Date;
 
 
 //  ===== BASE CLASS =====
-public class Person {
+ class Person {
 
 		// TODO Auto-generated constructor stub
 		protected String name;
