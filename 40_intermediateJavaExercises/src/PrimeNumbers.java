@@ -15,7 +15,7 @@ public class PrimeNumbers {
 		}
 		
 		sc.close();
-//
+
 //		if(input == 2 || input == 3 || input == 5 || input == 7) {
 //			System.out.println("Prime Number");
 //		}
@@ -24,8 +24,7 @@ public class PrimeNumbers {
 //		} else {
 //			System.out.println("Prime Number");
 //		}
-//
-//		sc.close();
+
 	}
 	
 	
