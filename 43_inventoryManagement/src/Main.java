@@ -10,25 +10,27 @@ public class Main {
 		
 		int choice;
 		
-		displayInventory();
-		System.out.println("ENTER YOUR CHOICE :");
-		choice = sc.nextInt();
-		sc.nextLine();
 		
 		do {
+			displayInventory();
+			System.out.println("ENTER YOUR CHOICE :");
+			choice = sc.nextInt();
+			sc.nextLine();
+			
 			switch(choice) {
 			
 			case 1: 
 				System.out.println("Enter Product Name: ");
 				String itemName = sc.nextLine();
-				
+
 				System.out.println("Enter Quantity: ");
 				int quantity = sc.nextInt();
-				
+
 				System.out.println("Enter Price: ");
 				int price = sc.nextInt();
-				
-				inventory.addItem(itemName, quantity, price);
+
+				Product product = new Product(itemName, quantity, price);
+				inventory.addItem(product);
 				break;
 				
 			case 2:
@@ -61,7 +63,6 @@ public class Main {
 			
 		}while(choice != 0);
 			sc.close();
-		
 	}
 	
 	
