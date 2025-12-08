@@ -6,10 +6,13 @@ public class Main {
 		Scanner sc = new Scanner(System.in);	
 		
 		int choice;
+		
+		sampleInput(SIS);
 		do {
 			displayMenu();
 			System.out.println("Enter your choice: ");
 			choice = sc.nextInt();
+			sc.nextLine();
 			
 			switch(choice) {
 			case 1:
@@ -22,20 +25,61 @@ public class Main {
 				
 				Student student = new Student(name, year, address);
 				SIS.addStudent(student);
+				break;
 				
 			case 2: 
 				SIS.listOfStudents();
+				break;
 				
 			case 3:
 				System.out.println("Enter Student Name:");
-				String name = sc.nextLine();
+				String updateName = sc.nextLine();
 				System.out.println("Enter Student Year: ");
-				String year = sc.nextLine();
+				String updateYear = sc.nextLine();
 				System.out.println("Enter Student Address: ");
-				String address = sc.nextLine();
+				String updateAddress = sc.nextLine();
 				
-				Student student = new Student(name, year, address);
-				SIS.updateStudent(name, year, address);
+				SIS.updateStudent(updateName, updateYear, updateAddress);
+				break;
+				
+			case 4:
+				System.out.println("Enter Student name to remove: ");
+				String removeName =sc.nextLine();
+				
+				SIS.removeStudent(removeName);
+				break;
+			case 5:
+				System.out.println("Enter Course Name:");
+				String courseName = sc.nextLine();
+				System.out.println("Enter Course Teacher: ");
+				String courseTeacher = sc.nextLine();
+			
+				Course course = new Course(courseName, courseTeacher);
+				SIS.addCourse(course);		
+				break;
+			case 6:
+				SIS.listOfCourse();
+				break;
+			case 7:
+				System.out.println("Enter Course :");
+				String updateCourse = sc.nextLine();
+				
+				System.out.println("Enter Course Teacher :");
+				String updateTeacher = sc.nextLine();
+				
+				SIS.updateCourse(updateCourse, updateTeacher);
+				break;
+			case 8:
+				System.out.println("Enter Course to remove :");
+				String removeCourse = sc.nextLine();
+				
+				SIS.removeCourse(removeCourse);
+				break;
+				default:
+					System.out.println("Invalid Input");
+					
+				case 0:
+					System.out.println("EXITING PROGRAM...");
 			}
 			
 		}while(choice != 0);
@@ -57,4 +101,12 @@ public class Main {
 		
 	}
 
+	public static void sampleInput(StudentInformationSystem SIS) {
+	
+		SIS.addStudent(new Student("Raymund", "2025", "Pozorrubio"));
+		SIS.addStudent(new Student("Romeo", "2023", "Agoo"));
+		SIS.addCourse(new Course("Biology", "Mr.Sanchez"));
+		SIS.addCourse(new Course("Comsci", "Mrs. Cruz"));
+		
+	}
 }
