@@ -4,6 +4,8 @@ public class Main {
 	public static void main(String[] args) {
 		UserStatus status = UserStatus.ACTIVE;
 
+		UserStatus[] statuses = UserStatus.values();
+		
 		switch(status){
 		case PENDING:
 			System.out.println("Wait for few more minutes.");
@@ -17,6 +19,11 @@ public class Main {
 			default:
 				System.out.println("Unsupported enums");
 		}
+		
+		for(UserStatus stats: UserStatus.values()) {
+			System.out.println(stats);
+		}
+		
 	}
 	
 }
