@@ -3,8 +3,6 @@ public class Main {
 	
 	public static void main(String[] args) {
 		UserStatus status = UserStatus.ACTIVE;
-
-		UserStatus[] statuses = UserStatus.values();
 		
 		switch(status){
 		case PENDING:
