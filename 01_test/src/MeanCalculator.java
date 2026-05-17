@@ -16,6 +16,12 @@ public class MeanCalculator {
 		
 		System.out.printf("The Average : %.2f\n", avg);
 		
+		int a = 5 + 7;
+		int b = a * 3;
+		int c = b / 4;
+		int d = b % c;
+		System.out.println(d);
+		
 		scanner.close();
 	}
 }
