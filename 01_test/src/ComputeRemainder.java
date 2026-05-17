@@ -15,7 +15,7 @@ public class ComputeRemainder {
 		
 		System.out.println("Remainder :" + displayRemainder);
 		System.out.println("Multiple by three :" + multipleByThree);
-		
+				
 		scanner.close();
 	}
 }
